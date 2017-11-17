@@ -1,0 +1,141 @@
+body {
+	background-image: url(Assets/jungle.jpg);
+	width: 1300px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 100px;
+	text-align: center;
+	text-shadow: 1px 2px #ffffff;
+	color: #867f7f;
+	font-family: 'Permanent Marker', cursive;
+}
+
+h2 {
+	font-size: 60px;
+	text-align: center;
+	text-shadow: 1px 2px #ffffff;
+	color: #867f7f;
+	font-family: 'Permanent Marker', cursive;
+}
+
+#ceiling {
+	margin-top: 5%;
+}
+
+#onethree, #twothree, #threethree {
+	margin: 0px auto;
+	height: 250px;
+	width: 300px;
+	display: inline-block;
+	padding: 10px;
+}
+
+#onetwo, #twotwo {
+	margin: 0px auto;
+	height: 325px;
+	width: 400px;
+	padding: 10px;
+	/*background-color: blue;*/
+}
+
+#onetwo {
+	position: absolute;
+	left: 20%;
+	top: 37%;
+}
+
+#twotwo {
+	position: absolute;
+	right: 15%;
+	top: 37%;
+}
+
+#info {
+	position: absolute;
+	background: black;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	border: medium solid black;
+	box-shadow: 2px 2px 5px #867f7f;
+}
+
+#attack {
+	width: 150px;
+	height: 50px;
+	background-color: white;
+	color: black;
+	position: absolute;
+	bottom: 4%;
+	left: 28%;
+	border-radius: 10px;
+	font-family: Helvetica;
+	font-size: 24px;
+	border: medium solid black;
+	box-shadow: 2px 2px 5px #867f7f;
+	display: none;
+}
+
+#attack2 {
+	width: 150px;
+	height: 50px;
+	background-color: white;
+	color: black;
+	position: absolute;
+	bottom: 4%;
+	left: 28%;
+	border-radius: 10px;
+	font-family: Helvetica;
+	font-size: 24px;
+	border: medium solid black;
+	box-shadow: 2px 2px 5px #867f7f;
+	display: none;
+}
+
+#trexhealth {
+	background-color: gray;
+	height: 50px;
+	width: 150px;
+	left: 87%;
+	bottom: 35%;
+	position: absolute;
+	box-shadow: 2px 2px 5px #867f7f;
+	border-radius: 10px;
+	display: none;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#velochealth {
+	background-color: white;
+	height: 50px;
+	width: 150px;
+	left: 7%;
+	bottom: 35%;
+	position: absolute;
+	box-shadow: 2px 2px 5px #867f7f;
+	border-radius: 10px;
+	display: none;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#next {
+	width: 150px;
+	height: 50px;
+	background-color: white;
+	color: black;
+	position: absolute;
+	top: 25%;
+	left: 28%;
+	border-radius: 10px;
+	font-family: Helvetica;
+	font-size: 24px;
+	border: medium solid black;
+	box-shadow: 2px 2px 5px #867f7f;
+	display: none;
+}
