@@ -4,16 +4,21 @@
   <meta charset="UTF-8">
   <title>Clever Girl</title>
 
-  <!-- Bootstrap File -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!--  -->
+
+  <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
 
-  <!-- Java -->
+  <!-- Javascript -->
   <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="script2.js"></script>
 
  <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
@@ -21,40 +26,39 @@
 </head>
 <body>
 
-  <h1 class="row">Clever Girl</h1>
+  <h1>Clever Girl</h1>
 
-  <h2 id="subtext" class="row">Press Any Key to Begin..</h2>
+  <h2 id="subtext"></h2>
 
-  <section id="ceiling">
+   <section id="ceiling">
 
-    <div class="container">
+        <button class="btn" onclick="reset()" id="reset">Play Again</button>
 
-      <container id="contain1" class="row">
-        <div id="onethree" class="col"></div>
-        <div id="twothree" class="col"></div>
-        <div id="threethree" class="col"></div>
-      </container>
+        <button class="btn" onclick="eatPerson()" id="next">Next</button>
 
-    </div>
-
-        <div id="onetwo"></div>
+        <!-- Velociraptor health displays here -->
+        <div class="health" id="velocHealth">Health: <span id="vh"></span></div>
         
-          <div id="next" class="btn">Next</div>
-          <div id="attack" class="btn">Attack!</div>
-          <div id="attack2" class="btn">Attack!</div>
-          <div id="velochealth" class="sidebar-nav-fixed">Health: <span id="vh"></span></div>
+        <!-- Choose a Velociraptor -->
+        <div class="hoverable veloc" id="blue"></div>
+        <div class="hoverable veloc" id="delta"></div>
+        <div class="hoverable veloc" id="echo"></div>
+        <!--  -->
 
+        <!-- T-Rex health displays here -->
+        <div class="health" id="tRexHealth">Health: <span id="trh"></span></div>
+
+        <button class="btn pulse" onclick="submit()" id="submit">Submit</button>
+
+        <button class="btn" onclick="attack()" id="attack">Attack</button>
+
+        <button class="btn" onclick="attack_rex()" id="attackRex">Attack</button>
+       
+        <div id="onetwo"></div>
         <div id="twotwo"></div>
-          <div id="trexhealth">Health: <span id="trh"></span></div>
 
   </section>
 
-      
-
-  <script>
-
-   
-  </script>
 
 </body>
 </html>

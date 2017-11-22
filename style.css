@@ -1,12 +1,10 @@
 body {
 	background-image: url(Assets/jungle.jpg);
-	width: 1300px;
 	text-align: center;
 }
 
 h1 {
 	font-size: 100px;
-	text-align: center;
 	text-shadow: 1px 2px #ffffff;
 	color: #867f7f;
 	font-family: 'Permanent Marker', cursive;
@@ -14,47 +12,48 @@ h1 {
 
 h2 {
 	font-size: 60px;
-	text-align: center;
 	text-shadow: 1px 2px #ffffff;
 	color: #867f7f;
 	font-family: 'Permanent Marker', cursive;
 }
 
+/*Sets up CSS Grid*/
 #ceiling {
 	margin-top: 5%;
+	display: grid;
+	grid-template-rows: 50px auto 100px;
+	grid-template-columns: auto auto auto auto auto;
+	grid-gap: 30px;
 }
+/**/
 
-#onethree, #twothree, #threethree {
+/*Velociraptor choice displays*/
+.veloc {
 	margin: 0px auto;
 	height: 250px;
 	width: 300px;
-	display: inline-block;
 	padding: 10px;
+	border-radius: 5px;
+	background-color: rgba(0,0,0,0);
 }
 
-#onetwo, #twotwo {
-	margin: 0px auto;
-	height: 325px;
-	width: 400px;
-	padding: 10px;
-	/*background-color: blue;*/
+.velocBord {
+	border: medium solid #c91010;
 }
 
-#onetwo {
-	position: absolute;
-	left: 20%;
-	top: 37%;
+#blue {
+	grid-row: 2;
+	grid-column: 2;
 }
 
-#twotwo {
-	position: absolute;
-	right: 15%;
-	top: 37%;
+#delta {
+	grid-row: 2;
+	grid-column: 3;
 }
 
-#info {
-	position: absolute;
-	background: black;
+#echo {
+	grid-row: 2;
+	grid-column: 4;
 }
 
 img {
@@ -64,78 +63,99 @@ img {
 	box-shadow: 2px 2px 5px #867f7f;
 }
 
-#attack {
-	width: 150px;
-	height: 50px;
-	background-color: white;
+.veloc img:hover {
+	box-shadow: 2px 2px 5px #84e4b6;
+}
+/**/
+
+#onetwo {
+	grid-row: 2;
+	grid-column: 2;
+}
+
+#twotwo {
+	grid-row: 2;
+	grid-column: 4;
+}
+
+#onetwo, #twotwo {
+	margin: 0px auto;
+	height: 325px;
+	width: 400px;
+	display: none;
+}
+
+/*Buttons*/
+
+.btn {
+	min-width: 150px;
+	min-height: 50px;
+	justify-self: center;
+	align-self: center;
+	background-color: #e7e7e7;
 	color: black;
-	position: absolute;
-	bottom: 4%;
-	left: 28%;
 	border-radius: 10px;
-	font-family: Helvetica;
 	font-size: 24px;
-	border: medium solid black;
+	border: 1px solid black;
 	box-shadow: 2px 2px 5px #867f7f;
-	display: none;
 }
 
-#attack2 {
-	width: 150px;
-	height: 50px;
-	background-color: white;
-	color: black;
-	position: absolute;
-	bottom: 4%;
-	left: 28%;
-	border-radius: 10px;
-	font-family: Helvetica;
-	font-size: 24px;
-	border: medium solid black;
-	box-shadow: 2px 2px 5px #867f7f;
-	display: none;
-}
-
-#trexhealth {
-	background-color: gray;
-	height: 50px;
-	width: 150px;
-	left: 87%;
-	bottom: 35%;
-	position: absolute;
-	box-shadow: 2px 2px 5px #867f7f;
-	border-radius: 10px;
-	display: none;
-	font-size: 24px;
-	font-weight: bold;
-}
-
-#velochealth {
-	background-color: white;
-	height: 50px;
-	width: 150px;
-	left: 7%;
-	bottom: 35%;
-	position: absolute;
-	box-shadow: 2px 2px 5px #867f7f;
-	border-radius: 10px;
-	display: none;
-	font-size: 24px;
-	font-weight: bold;
+#submit {
+	grid-row: 3/4;
+	grid-column: 1/6;
+	background-color: #40847b;
 }
 
 #next {
-	width: 150px;
-	height: 50px;
-	background-color: white;
-	color: black;
-	position: absolute;
-	top: 25%;
-	left: 28%;
-	border-radius: 10px;
-	font-family: Helvetica;
-	font-size: 24px;
-	border: medium solid black;
-	box-shadow: 2px 2px 5px #867f7f;
 	display: none;
+	grid-row: 1;
+	grid-column: 2;
+}
+
+#attack {	
+	display: none;
+	grid-row: 3;
+	grid-column: 2;
+}
+
+#attackRex {	
+	display: none;
+	grid-row: 3;
+	grid-column: 2;
+}
+
+#reset {
+	display: none;
+	grid-row: 1;
+	grid-column: 1/6;
+}
+
+/**/
+
+/*Health displays*/
+.health {
+	box-shadow: 2px 2px 5px #867f7f;
+	border-radius: 10px;
+	padding: 10px;
+	border: 1px solid black;
+	font-size: 24px;
+	font-weight: bold;
+	justify-self: center;
+	align-self: center;
+	height: 60px;
+	width: 160px;
+}
+
+#tRexHealth {
+	background-color: gray;	
+	display: none;
+	grid-row: 2;
+	grid-column: 5;
+}
+
+#velocHealth {
+	background-color: #e7e7e7;
+	display: none;	
+	grid-row: 2;
+	grid-column: 1;	
 }
