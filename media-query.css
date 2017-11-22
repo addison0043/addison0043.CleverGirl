@@ -88,35 +88,39 @@
 		grid-row: 2;
 		grid-column: 1/4;
 	}
+	#velocHealth {
+		grid-row: 2;
+		grid-column: 1/4;
+		margin: auto;
+		background-color: rgba(235,235,235,.5);
+		z-index: 10;
+	}
 	#twotwo {
 		grid-row: 4;
 		grid-column: 1/4;
 	}
+	#tRexHealth {
+		grid-row: 4;
+		grid-column: 1/4;
+		margin: auto;
+		background-color: rgba(134,62,62,.5);
+		z-index: 10;
+	}
 	#attack {
-		grid-row: 3;
-		grid-column: 1/4;
-		margin: auto;
-	}
-	#attackRex {
-		grid-row: 3;
-		grid-column: 1/4;
-	}
-	#next {
-		grid-row: 3;
-		grid-column: 1/4;
-		margin: auto;
-	}
-	#reset {
-	grid-column: 1/4;
-	}
-	#velocHealth {
 		grid-row: 1;
 		grid-column: 1/4;
 		margin: auto;
 	}
-	#tRexHealth {
-		grid-row: 5;
+	#attackRex {
+		grid-row: 1;
 		grid-column: 1/4;
-		margin-bottom: 30px;
+	}
+	#next {
+		grid-row: 1;
+		grid-column: 1/4;
+		margin: auto;
+	}
+	#reset {
+		grid-column: 1/4;
 	}
 }
