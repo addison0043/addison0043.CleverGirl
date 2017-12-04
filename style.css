@@ -17,44 +17,57 @@ h2 {
 	font-family: 'Permanent Marker', cursive;
 }
 
-/*Sets up CSS Grid*/
+/*Grid 1*/
 #ceiling {
 	margin-top: 5%;
 	display: grid;
-	grid-template-rows: 50px auto 100px;
-	grid-template-columns: auto auto auto auto auto;
+	grid-template-rows: auto auto 100px;
+	grid-template-columns: auto 300px 300px 300px auto;
 	grid-gap: 30px;
 }
-/**/
+	
+	/*Button*/
+	#submit {
+	grid-row: 1;
+	grid-column: 1/6;
+	background-color: #40847b;
+	}
 
-/*Velociraptor choice displays*/
-.veloc {
-	margin: 0px auto;
+	/*Velociraptor choice displays*/
+	.veloc {
+	margin: auto;
 	height: 250px;
 	width: 300px;
 	padding: 10px;
 	border-radius: 5px;
 	background-color: rgba(0,0,0,0);
-}
+	}
 
-.velocBord {
-	border: medium solid #c91010;
-}
+	.velocBord {
+		border: medium solid #c91010;
+	}
 
-#blue {
-	grid-row: 2;
-	grid-column: 2;
-}
+	#blue {
+		grid-row: 2;
+		grid-column: 2;
+	}
 
-#delta {
-	grid-row: 2;
-	grid-column: 3;
-}
+	#delta {
+		grid-row: 2;
+		grid-column: 3;
+	}
 
-#echo {
-	grid-row: 2;
-	grid-column: 4;
-}
+	#echo {
+		grid-row: 2;
+		grid-column: 4;
+	}
+
+	.veloc img:hover {
+	box-shadow: 2px 2px 5px #84e4b6;
+	}
+	/**/
+/*End of Grid 1*/
+
 
 img {
 	width: 100%;
@@ -63,33 +76,78 @@ img {
 	box-shadow: 2px 2px 5px #867f7f;
 }
 
-.veloc img:hover {
-	box-shadow: 2px 2px 5px #84e4b6;
-}
-/**/
-
-#onetwo {
-	grid-row: 2;
-	grid-column: 2;
+/*Grid 2*/
+#ceiling2{
+	display: grid;
+	grid-template-rows: 100px auto 100px;
+	grid-template-columns: 50vw 50vw;
+	grid-gap: 30px;
 }
 
-#twotwo {
-	grid-row: 2;
-	grid-column: 4;
-}
+	#onetwo {
+		grid-row: 2;
+		grid-column: 1;
+	}
 
-#onetwo, #twotwo {
-	margin: 0px auto;
-	height: 325px;
-	width: 400px;
-	display: none;
-}
+	#velocHealth {
+		background-color: #e7e7e7;
+		display: none;
+		grid-row: 2;
+		grid-column: 1;
+		background-color: rgba(235,235,235,.5);
+		z-index: 10;
+	}
+
+	#twotwo {
+		grid-row: 2;
+		grid-column: 2;
+	}
+
+	#tRexHealth {
+		background-color: gray;	
+		display: none;
+		background-color: rgba(134,62,62,.5);
+		z-index: 10;
+		grid-row: 2;
+		grid-column: 3;
+	}
+
+	#onetwo, #twotwo {
+		margin: 0px auto;
+		height: 325px;
+		width: 400px;
+	}
+
+	#next {
+		display: none;
+		grid-row: 1;
+		grid-column: 1;
+	}
+
+	#attack {	
+		display: none;
+		grid-row: 3;
+		grid-column: 1;
+	}
+
+	#attackRex {	
+		display: none;
+		grid-row: 1;
+		grid-column: 1;
+	}
+
+	#reset {
+		height: 100px;
+		display: none;
+		grid-row: 1;
+		grid-column: 1/3;
+	}
 
 /*Buttons*/
 
 .btn {
-	min-width: 150px;
-	min-height: 50px;
+	width: 200px;
+	min-height: 75px;
 	margin: 0px auto;
 	background-color: #e7e7e7;
 	color: black;
@@ -99,34 +157,11 @@ img {
 	box-shadow: 2px 2px 5px #867f7f;
 }
 
-#submit {
-	grid-row: 1;
-	grid-column: 1/6;
-	background-color: #40847b;
-}
-
-#next {
-	display: none;
-	grid-row: 1;
-	grid-column: 2;
-}
-
-#attack {	
-	display: none;
-	grid-row: 3;
-	grid-column: 2;
-}
-
-#attackRex {	
-	display: none;
-	grid-row: 1;
-	grid-column: 2;
-}
-
-#reset {
-	display: none;
-	grid-row: 1;
-	grid-column: 1/6;
+.btn h3 {
+	font-family: 'Patua One', cursive;
+	text-shadow: 1px 1px #ffffff;
+	margin: auto;
+	color: black;
 }
 
 /**/
@@ -142,20 +177,4 @@ img {
 	margin: auto;
 	height: 60px;
 	width: 160px;
-}
-
-#tRexHealth {
-	background-color: gray;	
-	display: none;
-	margin-right: 10px;
-	grid-row: 2;
-	grid-column: 5;
-}
-
-#velocHealth {
-	background-color: #e7e7e7;
-	display: none;	
-	margin-left: 10px;
-	grid-row: 2;
-	grid-column: 1;	
 }

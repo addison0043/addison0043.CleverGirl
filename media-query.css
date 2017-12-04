@@ -1,142 +1,171 @@
-@media (max-width: 1250px) {
+@media (max-width: 870px) {
+	/*Grid1*/
 	#ceiling {
-		grid-template-rows: auto auto auto;
-		grid-template-columns: auto auto auto auto;
+		grid-template-rows: 150px auto auto;
+		grid-template-columns: 1fr 1fr;
 	}
-	#echo {
-		grid-row: 3;
-		grid-column: 1/5;
-	}
+		#submit {
+		grid-row: 1;
+		grid-column: 1/3;
+		}
+		#blue {
+			grid-column: 1;
+			justify-self: right;
+		}
+		#delta {
+			grid-column: 2;
+			justify-self: left;
+		}
+		#echo {
+			grid-row: 3;
+			grid-column: 1/3;
+			margin: auto;
+		}
+	/*End of Grid 1*/
+
 	.veloc, #onetwo, #twotwo {
 		height: 300px;
 		width: 360px;
-		margin: auto;
 	}
 	.btn {
 		width: 250px;
 		height: 100px;
 		font-size: 36px;
 	}
-	#submit {
-		grid-row: 1;
-		grid-column: 1/5;
-	}
-	#onetwo {
-		grid-row: 2;
-		grid-column: 1/3;
-		margin: auto;
-	}
-	#twotwo {
-		grid-row: 2;
-		grid-column: 3/5;
-		margin: auto;
-	}
-	#attack {
-		grid-row: 3;
-		grid-column: 1/3;
-		justify-self: left;
-		margin-left: 30px;
-	}
-	#attackRex {
-		grid-row: 3;
-		grid-column: 1/3;
-		margin-bottom: 20px;
-	}
-	#next {
-		grid-row: 3;
-		grid-column: 1/3;
-		justify-self: right;
-		margin-right: 30px;
-	}
-	#reset {
-		grid-column: 1/5;
-	}
-	.health {
-		align-self: center;
-		justify-self: center;
-	}
-	#velocHealth {
-		grid-row: 1;
-		grid-column: 1/3;
-		margin: auto;
-	}
-	#tRexHealth {
-		grid-row: 1;
-		grid-column: 3/5;
-		margin: auto;
-	}
 
+	/*Grid2*/
+	#ceiling2{
+		grid-template-rows: auto auto 150px;
+		grid-template-columns: 50vw 50vw;
+		grid-gap: 30px;
+		text-align: center;
+	}
+		#onetwo {
+			grid-row: 2;
+			grid-column: 1;
+			margin: auto;
+		}
+		#velocHealth {
+			grid-row: 2;
+			grid-column: 1;
+			margin: auto;
+			background-color: rgba(235,235,235,.5);
+			z-index: 10;
+		}
+		#twotwo {
+			grid-row: 2;
+			grid-column: 2;
+			margin: auto;
+		}
+		#tRexHealth {
+			grid-row: 2;
+			grid-column: 2;
+			margin: auto;
+			background-color: rgba(134,62,62,.5);
+			z-index: 10;
+		}
+		#attack {
+			grid-row: 3;
+			grid-column: 1;
+			justify-self: left;
+			margin-left: 30px;
+		}
+		#attackRex {
+			grid-row: 3;
+			grid-column: 1;
+			margin-bottom: 20px;
+		}
+		#next {
+			grid-row: 3;
+			grid-column: 1;
+			justify-self: right;
+			margin-right: 30px;
+		}
+		#reset {
+			grid-column: 1/3;
+		}
 }
 
 @media (max-width: 680px) {
+	/*Grid1*/
 	#ceiling {
-		grid-template-rows: auto auto auto auto auto;
-		grid-template-columns: auto auto auto;
+		grid-template-rows: auto auto auto auto 20px;
+		grid-template-columns: 100vw;
 		text-align: center;
 	}
-	#blue {
-		grid-row: 2;
-		grid-column: 2;
-	}
-	#delta {
-		grid-row: 3;
-		grid-column: 2;
-	}
-	#echo {
-		grid-row: 4;
-		grid-column: 2;
-	}
+		#submit {
+			grid-row: 1;
+			grid-column: 1;
+		}
+		#blue {
+			grid-row: 2;
+			grid-column: 1;
+		}
+		#delta {
+			grid-row: 3;
+			grid-column: 1;
+		}
+		#echo {
+			grid-row: 4;
+			grid-column: 1;
+		}	
+	/*End of Grid1*/
 	.veloc, #onetwo, #twotwo {
 		height: 370px;
 		width: 460px;
 		margin: auto;
 	}
-	#onetwo {
-		grid-row: 2;
-		grid-column: 1/4;
-	}
-	#velocHealth {
-		grid-row: 2;
-		grid-column: 1/4;
-		margin: auto;
-		background-color: rgba(235,235,235,.5);
-		z-index: 10;
-	}
-	#twotwo {
-		grid-row: 4;
-		grid-column: 1/4;
-	}
-	#tRexHealth {
-		grid-row: 4;
-		grid-column: 1/4;
-		margin: auto;
-		background-color: rgba(134,62,62,.5);
-		z-index: 10;
-	}	
 	.btn {
 		width: 300px;
 		height: 100px;
 		font-size: 40px;
 	}
-	#submit {
-		grid-row: 1;
-		grid-column: 1/4;
+	/*Grid2*/
+	#ceiling2 {
+		grid-template-rows: auto auto auto 30px;
+		grid-template-columns: 100vw;
+		text-align: center;
 	}
-	#attack {
-		grid-row: 1;
-		grid-column: 1/4;
-		margin: auto;
-	}
-	#attackRex {
-		grid-row: 1;
-		grid-column: 1/4;
-	}
-	#next {
-		grid-row: 1;
-		grid-column: 1/4;
-		margin: auto;
-	}
-	#reset {
-		grid-column: 1/4;
-	}
+		#onetwo {
+			grid-row: 1;
+			grid-column: 1;
+		}
+		#velocHealth {
+			grid-row: 1;
+			grid-column: 1;
+			margin: auto;
+			background-color: rgba(235,235,235,.5);
+			z-index: 10;
+		}
+		#twotwo {
+			grid-row: 3;
+			grid-column: 1;
+		}
+		#tRexHealth {
+			grid-row: 3;
+			grid-column: 1;
+			margin: auto;
+			background-color: rgba(134,62,62,.5);
+			z-index: 10;
+		}		
+		#attack {
+			grid-row: 2;
+			grid-column: 1;
+			margin: auto;
+		}
+		#attackRex {
+			grid-row: 2;
+			grid-column: 1;
+			margin: auto;
+		}
+		#next {
+			grid-row: 2;
+			grid-column: 1;
+			margin: auto;
+		}
+		#reset {
+			grid-column: 1;
+			grid-row: 2;
+			margin: auto;
+		}
 }

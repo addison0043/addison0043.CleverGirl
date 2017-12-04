@@ -9,6 +9,7 @@ window.onload = function() {
 
 
 function start_game() {
+	$("#ceiling2").hide();
 	$("#subtext").html("Choose a Velociraptor");
 
 	$("#blue").html('<img src="Assets/Blue.gif"/>');
@@ -30,21 +31,18 @@ function submit() {
 	
 	if ($("#blue").hasClass('velocBord')) {
 			hideVeloc();
-			oneOnOne();
 			$("#subtext").hide();
 			$("#onetwo").html('<img src="Assets/Blue.jpg"/>');
 			eatPerson();
 		}
 	else if ($("#delta").hasClass('velocBord')) {
 			hideVeloc();
-			oneOnOne();
 			$("#subtext").hide();
 			$("#onetwo").html('<img src="Assets/Delta.jpg"/>');
 			eatPerson();
 		}
 	else if ($("#echo").hasClass('velocBord')) {
 			hideVeloc();
-			oneOnOne();
 			$("#subtext").hide();
 			$("#onetwo").html('<img src="Assets/Echo.jpg"/>');
 			eatPerson();
@@ -52,17 +50,10 @@ function submit() {
 }
 
 function hideVeloc() {
-	$("#blue").hide();
-	$("#delta").hide();
-	$("#echo").hide();
-	$("#submit").hide();
+	$("#ceiling").remove();
+	$("#ceiling2").show();
 }
 
-function oneOnOne() {
-	$("#onetwo").show();
-	$("#twotwo").show();
-	$("#velocHealth").show();
-}
 
 function reset() {
 	document.location.reload(true);

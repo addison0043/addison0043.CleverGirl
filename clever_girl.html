@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Clever Girl</title>
 
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
   <!-- Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
@@ -14,15 +17,12 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="media-query.css">
 
-  <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
-
   <!-- Javascript -->
   <script type="text/javascript" src="script.js"></script>
   <script type="text/javascript" src="script2.js"></script>
 
  <!-- Google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Patua+One|Permanent+Marker" rel="stylesheet">
 
 </head>
 <body>
@@ -32,31 +32,35 @@
   <h2 id="subtext"></h2>
 
    <section id="ceiling">
+     
+        <button class="btn pulse" onclick="submit()" id="submit"><h3>Submit</h3></button>
 
-        <button class="btn" onclick="reset()" id="reset">Play Again</button>
-
-        <button class="btn" onclick="eatPerson()" id="next">Next</button>
-
-        <!-- Velociraptor health displays here -->
-        <div class="health" id="velocHealth">Health: <span id="vh"></span></div>
-        
         <!-- Choose a Velociraptor -->
         <div class="veloc" id="blue"></div>
         <div class="veloc" id="delta"></div>
         <div class="veloc" id="echo"></div>
         <!--  -->
 
-        <!-- T-Rex health displays here -->
-        <div class="health" id="tRexHealth">Health: <span id="trh"></span></div>
+  </section>
 
-        <button class="btn pulse" onclick="submit()" id="submit">Submit</button>
+  <section id="ceiling2">
 
-        <button class="btn" onclick="attack()" id="attack">Attack</button>
+    <button class="btn" onclick="reset()" id="reset"><h3>Play Again</h3></button>
 
-        <button class="btn" onclick="attack_rex()" id="attackRex">Attack</button>
-       
-        <div id="onetwo"></div>
-        <div id="twotwo"></div>
+    <button class="btn" onclick="eatPerson()" id="next"><h3>Next</h3></button>
+
+      <!-- Velociraptor health displays here -->
+      <div class="health" id="velocHealth">Health: <span id="vh"></span></div>
+
+    <div id="onetwo"></div>
+    <div id="twotwo"></div>
+
+      <!-- T-Rex health displays here -->
+      <div class="health" id="tRexHealth">Health: <span id="trh"></span></div>
+
+    <button class="btn" onclick="attack()" id="attack"><h3>Attack</h3></button>
+
+    <button class="btn" onclick="attack_rex()" id="attackRex"><h3>Attack</h3></button>
 
   </section>
 
