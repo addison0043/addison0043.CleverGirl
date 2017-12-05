@@ -1,4 +1,5 @@
 var jurassMusic = new Audio("Assets/JurassicParkRemix.mp3");
+var growl = new Audio("Assets/growl.mp3");
 var velocHealth = Math.floor(Math.random() * 40) + 10;
 	console.log(velocHealth);
 var trex_health = Math.floor(Math.random() * 50) + 300;
@@ -31,6 +32,8 @@ function start_game() {
 
 function submit() {
 	
+	growl.play();
+
 	if ($("#blue").hasClass('velocBord')) {
 			hideVeloc();
 			$("#subtext").hide();

@@ -1,3 +1,7 @@
+var attackSound = new Audio("Assets/attackSound.mp3");
+var winner = new Audio("Assets/winner.mp3");
+var tRexRoar = new Audio("Assets/tRexRoar.mp3");
+
 var peopleToEat = [
 	"Assets/children.jpg",
 	"Assets/claire.gif",
@@ -21,7 +25,7 @@ var peopleEaten = [
 function eatPerson() {
 	
 	if (peopleToEat.length > 4) {
-
+		
 		$("#next").hide();
 		$("#velocHealth").hide();
 		rand = Math.floor(Math.random() * peopleToEat.length);
@@ -41,6 +45,7 @@ function eatPerson() {
 }
 
 function attack() {
+	attackSound.play();
 	var addHealth = Math.floor(Math.random() * 100) + 60;
 	velocHealth += addHealth;
 	$("#vh").html(velocHealth);
@@ -73,7 +78,8 @@ function attack_rex() {
 	$("#vh").text(velocHealth);
 	final_boss();
 
-		if (trex_health <= 0 && velocHealth > 0) {
+		if (trex_health <= 0 && velocHealth > 0) {			
+			winner.play();
 			$("#onetwo").html('<img src="Assets/winner.jpg"/>');
 			$("#twotwo").html('<img src="Assets/t-rex_dead.jpg"/>');
 			$("#subtext").show();
@@ -85,6 +91,7 @@ function attack_rex() {
 		}
 
 		else if (trex_health >= 0 && velocHealth <= 0) {
+			tRexRoar.play();
 			$("#subtext").hide();
 			$("#onetwo").html('<img src="Assets/loser.jpg"/>');
 			$("#twotwo").html('<img src="Assets/t-rex_wins.gif"/>');
@@ -95,6 +102,7 @@ function attack_rex() {
 		}
 
 		else if (trex_health <= 0 && velocHealth <= 0) {
+			tRexRoar.play();
 			$("#subtext").hide();
 			$("#onetwo").html('<img src="Assets/loser.jpg"/>');
 			$("#twotwo").html('<img src="Assets/t-rex_wins.gif"/>');
