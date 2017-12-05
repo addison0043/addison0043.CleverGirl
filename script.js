@@ -1,9 +1,11 @@
+var jurassMusic = new Audio("Assets/JurassicParkRemix.mp3");
 var velocHealth = Math.floor(Math.random() * 40) + 10;
 	console.log(velocHealth);
 var trex_health = Math.floor(Math.random() * 50) + 300;
 var rand;
 
 window.onload = function() {
+	jurassMusic.play();
 	start_game();
 }
 
