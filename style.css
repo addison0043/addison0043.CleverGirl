@@ -118,6 +118,10 @@ img {
 		width: 400px;
 	}
 
+	#submit, #next, #attack, #attackRex {
+		display: flex;
+	}
+
 	#next {
 		display: none;
 		grid-row: 1;
@@ -146,7 +150,7 @@ img {
 /*Buttons*/
 
 .btn {
-	width: 200px;
+	width: 230px;
 	min-height: 75px;
 	margin: 0px auto;
 	background-color: #e7e7e7;
