@@ -37,19 +37,19 @@ function submit() {
 	if ($("#blue").hasClass('velocBord')) {
 			hideVeloc();
 			$("#subtext").hide();
-			$("#onetwo").html('<img src="Assets/Blue.jpg"/>');
+			$("#onetwo").prepend('<img src="Assets/Blue.jpg"/>');
 			eatPerson();
 		}
 	else if ($("#delta").hasClass('velocBord')) {
 			hideVeloc();
 			$("#subtext").hide();
-			$("#onetwo").html('<img src="Assets/Delta.jpg"/>');
+			$("#onetwo").prepend('<img src="Assets/Delta.jpg"/>');
 			eatPerson();
 		}
 	else if ($("#echo").hasClass('velocBord')) {
 			hideVeloc();
 			$("#subtext").hide();
-			$("#onetwo").html('<img src="Assets/Echo.jpg"/>');
+			$("#onetwo").prepend('<img src="Assets/Echo.jpg"/>');
 			eatPerson();
 		}
 }

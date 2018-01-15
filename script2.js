@@ -4,7 +4,7 @@ var tRexRoar = new Audio("Assets/tRexRoar.mp3");
 
 var peopleToEat = [
 	"Assets/children.jpg",
-	"Assets/claire.gif",
+	"Assets/claire.jpg",
 	"Assets/dr_grant.jpg",
 	"Assets/ian.jpg",
 	"Assets/nedry.jpg",
@@ -14,7 +14,7 @@ var peopleToEat = [
 
 var peopleEaten = [
 	"Assets/children_eaten.jpg",
-	"Assets/claire_eaten.gif",
+	"Assets/claire_eaten.jpg",
 	"Assets/dr_grant_eaten.jpg",
 	"Assets/ian_eaten.jpg",
 	"Assets/nedry_eaten.jpg",
@@ -57,13 +57,16 @@ function attack() {
 }
 
 function final_boss() {
+	$("#twotwo").empty();	
 	$("#next").hide();
 	$("#attack").hide();
 	$("#attackRex").show();
 	$("#subtext").show();
 	$("#subtext").text("Attack the T-Rex!");
-	$("#twotwo").html('<img src="Assets/t-rex.jpg"/>');
-	$("#tRexHealth").show();
+	$("#twotwo").append('<img src="Assets/t-rex.jpg"/>');
+	
+		$("#twotwo").append('<figcaption class="health" id="tRexHealth">Health: <span id="trh"></span></figcaption>');
+
 	$("#trh").text(trex_health);
 }
 
@@ -94,7 +97,7 @@ function attack_rex() {
 			tRexRoar.play();
 			$("#subtext").hide();
 			$("#onetwo").html('<img src="Assets/loser.jpg"/>');
-			$("#twotwo").html('<img src="Assets/t-rex_wins.gif"/>');
+			$("#twotwo").html('<img src="Assets/t-rexWINS.gif"/>');
 			$("#velocHealth").hide();
 			$("#tRexHealth").hide();
 			$("#attackRex").hide();
@@ -105,7 +108,7 @@ function attack_rex() {
 			tRexRoar.play();
 			$("#subtext").hide();
 			$("#onetwo").html('<img src="Assets/loser.jpg"/>');
-			$("#twotwo").html('<img src="Assets/t-rex_wins.gif"/>');
+			$("#twotwo").html('<img src="Assets/t-rexWINS.gif"/>');
 			$("#velocHealth").hide();
 			$("#tRexHealth").hide();
 			$("#attackRex").hide();

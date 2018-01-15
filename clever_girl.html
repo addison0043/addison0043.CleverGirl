@@ -15,7 +15,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="media-query.css">
+  <!-- <link rel="stylesheet" type="text/css" href="media-query.css"> -->
 
   <!-- Javascript -->
   <script type="text/javascript" src="script.js"></script>
@@ -31,38 +31,48 @@
 
   <h2 id="subtext"></h2>
 
-   <section id="ceiling">
+   <div id="ceiling">
      
-        <button class="btn pulse" onclick="submit()" id="submit"><h3>Submit</h3></button>
+      <button class="btn pulse" onclick="submit()" id="submit"><h3>Submit</h3></button>
 
         <!-- Choose a Velociraptor -->
-        <div class="veloc" id="blue"></div>
-        <div class="veloc" id="delta"></div>
-        <div class="veloc" id="echo"></div>
-        <!--  -->
+        <div class="chooseVeloc">
 
-  </section>
+          <div class="veloc" id="blue"></div>
+          <div class="veloc" id="delta"></div>
+          <div class="veloc" id="echo"></div>
 
-  <section id="ceiling2">
+        </div>
+          
+  </div>
+
+  <div id="ceiling2">
 
     <button class="btn" onclick="reset()" id="reset"><h3>Play Again</h3></button>
 
     <button class="btn" onclick="eatPerson()" id="next"><h3>Next</h3></button>
 
-      <!-- Velociraptor health displays here -->
-      <div class="health" id="velocHealth">Health: <span id="vh"></span></div>
-
-    <div id="onetwo"></div>
-    <div id="twotwo"></div>
-
-      <!-- T-Rex health displays here -->
-      <div class="health" id="tRexHealth">Health: <span id="trh"></span></div>
-
     <button class="btn" onclick="attack()" id="attack"><h3>Attack</h3></button>
 
     <button class="btn" onclick="attack_rex()" id="attackRex"><h3>Attack</h3></button>
 
-  </section>
+      <div class="showdown">
+
+        <!-- Velociraptor health displays here -->
+       
+        <div id="onetwo">
+          <figcaption class="health" id="velocHealth">Health: <span id="vh"></span></figcaption>
+        </div>
+
+        <!-- T-Rex health displays here -->        
+        <div id="twotwo">
+        </div>
+
+      </div>
+
+  
+
+  </div>
 
 
 </body>
